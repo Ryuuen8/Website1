@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="add-task">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <h2>Add Task</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_task">Task:</label>
+            <input type="text" id="id_task" name="task" required>
+        </div>
+        <div class="form-group">
+            <label for="id_day">Day:</label>
+            <select id="id_day" name="day" required>
+                {% for day in days %}
+                <option value="{{ day.pk }}">{{ day.day }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="id_due_date">Due Date:</label>
+            <input type="date" id="id_due_date" name="due_date" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Task</button>
+    </form>
+</div>
+{% endblock content %}

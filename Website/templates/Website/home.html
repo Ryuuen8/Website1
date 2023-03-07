@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<html>
+
+<body>
+    <div class="wrapper">
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+        {% if tasks_count > 0 %}
+        <h1 style="text-align: center;">Hello {{request.user.username}} you currently have {{tasks_count}} tasks </h1>
+        <h5 style="text-align: center;"><a href="{% url 'Add Task' %}">Add more</a>?</h5>
+        {% else %}
+        <h1 style="text-align: center;">Today is {{current_date|date:"l, F d, Y" }}</h1>
+        <h5 style="text-align: center;">You don't have any tasks for today <a href="{% url 'Add Task' %}">Add here</a>
+        </h5>
+        {% endif %}
+
+
+        <div class="Day-list">
+            {% for time1 in time %}
+            <h1>{{time1.day}} Tasks</h1>
+            <table style="width: 70%; margin-left: auto; margin-right: auto;" border="1">
+                <tr>
+                    <th>Tasks</th>
+                    <th style="width: 30%;">Due-Date</th>
+                    <th style="width: 20%">Action</th>
+                </tr>
+                {% for todo in todos %}
+                {% if todo.day == time1 %}
+                <tr>
+                    <td>{{ todo.task }}</td>
+                    <td>{{ todo.due_date }}</td>
+                    <td><a href="{% url 'Remove Task' todo.id %}">Delete</a></td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </table>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}

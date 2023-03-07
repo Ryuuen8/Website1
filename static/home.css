@@ -1,0 +1,190 @@
+html {
+    height: 100%;
+}
+
+/* style for the add task*/
+.add-task {
+    margin: 2rem auto;
+    width: 50%;
+    animation: fadeIn 1s ease;
+    background-color: linear-gradient(to bottom right, #74b9ff, #00cec9);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+    padding: 1rem;
+}
+
+.add-task h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    margin: 1rem 0;
+}
+
+form .form-group {
+    margin: 1rem 0;
+}
+
+label {
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+    margin-top: 1rem;
+    color: #ffffff;
+    background-color: #00b894;
+    border-color: #00b894;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #00a79d;
+    border-color: #00a79d;
+}
+
+/* Style for the page header */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    color: #ffffff;
+    background-color: #00b894;
+    border-color: #00b894;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #00a79d;
+    border-color: #00a79d;
+}
+
+/* Style for the tasks table */
+.Day-list {
+    margin: 2rem auto;
+    width: 50%;
+    animation: fadeIn 1s ease;
+    background-color: linear-gradient(to bottom right, #74b9ff, #00cec9);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+}
+
+.Day-list h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+    color: #2d3436;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: #00b894;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+td {
+    color: aliceblue;
+    border: 1px solid #1f1e1e;
+}
+
+td a {
+    color: #ffffff;
+    background-color: #121c1c;
+    border-color: #121c1c;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+tr:nth-child(even) {
+    background-color: #121c1c;
+}
+
+/* Body background */
+body {
+    background: linear-gradient(to bottom right, #74b9ff, #00cec9);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

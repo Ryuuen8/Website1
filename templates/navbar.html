@@ -1,0 +1,16 @@
+{% load static %}
+<style>
+    .nav-container {
+        text-align: center;
+    }
+</style>
+<!--<link rel="stylesheet" href="{% static 'home.css' %}">-->
+<div class="nav-container">
+    <nav>
+        <h1>My Todo app</h1>
+        {% if user.is_authenticated %}
+        <h2>Want to <small><a href="{% url 'Logout' %}">Logout</a></small>?</h2>
+        {% endif %}
+        <hr>
+    </nav>
+</div>

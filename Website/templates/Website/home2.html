@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<div class="Day-list">
+    {% for time1 in time %}
+    <h1>{{time1.day}} Tasks</h1>
+    {% endfor %}
+</div>
+
+{% endblock content %}
